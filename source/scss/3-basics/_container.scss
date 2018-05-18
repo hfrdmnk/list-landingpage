@@ -1,0 +1,14 @@
+// Wrapper
+
+.wrapper {
+    max-width: $wrapper;
+    padding-left: $wrapper-padding;
+    padding-right: $wrapper-padding;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper-padding {
+    padding-left: $wrapper-padding;
+    padding-right: $wrapper-padding;
+}
