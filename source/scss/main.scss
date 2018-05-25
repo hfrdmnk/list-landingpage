@@ -5,7 +5,7 @@
 // This file is only for importing all partial css. Do NOT write any css here!
 
 // 1 Tools
-@import '1-tools/normalize';
+@import '1-tools/minireset';
 
 // 2 Helpers
 @import '2-helpers/variables';
@@ -18,9 +18,14 @@
 @import '3-basics/container';
 
 // 4 Layout
-
+@import '4-layout/header';
+@import '4-layout/nav';
+@import '4-layout/content';
+@import '4-layout/footer';
 
 // 5 Modules
-
+@import '5-modules/btns';
+@import '5-modules/showcase';
 
 // 6 Pages
+@import '6-pages/home';

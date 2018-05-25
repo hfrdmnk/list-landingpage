@@ -1,0 +1,169 @@
+// #######################################
+// Navigation
+// #######################################
+
+.main-nav {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  width: calc(100vw + 70px);
+  height: 100vh;
+  min-height: 550px;
+  z-index: 100;
+  display: flex;
+  transition: all 0.5s ease;
+
+  &__content {
+    height: 100%;
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative
+  }
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 40px;
+    width: 40px;
+    transform: rotate(45deg);
+
+    span {
+      position: absolute;
+      display: block;
+      padding: 2px 0;
+      width: 40px;
+      background-color: $grey;
+      top: 18px;
+
+      &:last-child {
+        width: 40px;
+        margin-top: 0;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .logo {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      cursor: pointer;
+    }
+
+    > li {
+      text-align: center;
+      margin-bottom: 20px;
+
+      &.open {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+
+      span {
+        position: relative;
+      }
+
+      > a {
+        padding: 20px 0;
+      }
+
+      i {
+        position: absolute;
+        top: 0;
+        left: 110%;
+        transition: transform 0.3s ease;
+      }
+
+      > ul {
+        padding-top: 8px;
+        display: none;
+
+        > li {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__icons {
+      display: flex;
+
+      a {
+        padding: 10px;
+      }
+
+      img {
+        height: 1em;
+      }
+    }
+  }
+
+  &__sidebar {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70px;
+    height: 100vh;
+  }
+
+  &__btn {
+    cursor: pointer;
+    margin-left: 15px;
+    transform: rotate(-45deg);
+    padding: 5px;
+
+    span {
+      display: block;
+      padding: 2px 0;
+      width: 40px;
+      background-color: $background;
+      margin-bottom: 10px;
+
+      &:first-child {
+        width: 30px;
+        margin-left: 5px;
+      }
+
+      &:last-child {
+        width: 30px;
+        margin-left: 5px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__current {
+    display: none;
+  }
+
+  &__arrow {
+    display: none;
+  }
+}
+
+.menu-open {
+  .main-nav {
+    transform: translateX(100vw);
+  }
+}

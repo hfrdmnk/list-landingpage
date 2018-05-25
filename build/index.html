@@ -6,17 +6,182 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>List – Home</title>
   <meta name="author" content="Dominik Hofer">
-  <meta name="description" content="List ist eine übersichtliche, intuitiv zu bedienende und schön designte Todo App für dich und deinen Alltag. Damit du nie wieder etwas wichtiges vergisst.">
-  <meta name="keywords" content="Todo, App, Minimalistisch, Design, List, Alltag, Task, Liste, Aufgabe">
+  <meta name="description" content="List ist eine übersichtliche, intuitiv zu bedienende und schön designte Todo App für dich und deinen Alltag. Damit du immer den Überblick über deine Aufgaben hast und nie mehr etwas vergisst.">
+  <meta name="keywords" content="Todo, App, Minimalistisch, Design, Aufgaben, Tasks">
 
   <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,700,700i" rel="stylesheet">
 
   <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="assets/css/style.min.css">
 
 </head>
 <body>
-  <h1>Hallo Welt</h1>
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="main-nav__content wrapper-padding">
+      <div class="main-nav__close menu-toggle">
+        <span></span>
+        <span></span>
+      </div>
+      <p class="logo h2 bold">List</p>
+      <ul class="menu">
+        <li class="h3 bold"><a href="/" title="Home">Home</a></li>
+        <li class="h3 bold"><span>App <i class="material-icons h1">arrow_drop_down</i></span>
+          <ul>
+            <li class="bigger bold"><a href="features.html" title="Features">Features</a></li>
+            <li class="bigger bold"><a href="pricing.html" title="Preise">Preise</a></li>
+            <li class="bigger bold"><a href="download.html" title="Download">Download</a></li>
+          </ul>
+        </li>
+        <li class="h3 bold"><span>Über uns <i class="material-icons h1">arrow_drop_down</i></span>
+          <ul>
+            <li class="bigger bold"><a href="team.html" title="Team">Team</a></li>
+            <li class="bigger bold"><a href="contact.html" title="Kontakt">Kontakt</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="social">
+        <p class="social__text brand">Folge uns hier</p>
+        <div class="social__icons">
+          <a href="https://twitter.com" title="Link zu Twitter"><img src="assets/img/twitter.svg" alt="Twitter" title="Twitter"></a>
+          <a href="https://facebook.com" title="Link zu Facebook"><img src="assets/img/facebook.svg" alt="Facebook" title="Facebook"></a>
+          <a href="https://instagram.com" title="Link zu Instagram"><img src="assets/img/instagram.svg" alt="Instagram" title="Instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="main-nav__sidebar">
+      <div class="main-nav__btn menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p class="h3 bold main-nav__current">Home</p>
+      <i class="h2 bold material-icons main-nav__arrow">arrow_downward</i>
+    </div>
+  </nav>
+
+  <!-- Site Content -->
+  <main>
+
+    <!-- Header -->
+    <header>
+      <div class="wrapper-padding">
+        <div class="header__text">
+          <h1 class="header__title">List</h1>
+          <h2 class="header__subtitle h3 light">Die einzige Todoliste, die du benötigst</h2>
+        </div>
+        <div class="header__btns">
+          <a href="https://itunes.apple.com/ch/store" title="App Store Download" class="btn btn--primary btn--download header__download"><svg data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.cls-1{fill:#868e96;}</style></defs><title>app-store</title><path class="cls-1" d="M381.35,270.36c.65,69.51,61,92.64,61.65,92.94a251.39,251.39,0,0,1-31.79,65.33c-19.14,28-39,55.85-70.31,56.43-30.75.57-40.64-18.24-75.81-18.24S219,484.49,189.84,485.63c-30.21,1.14-53.22-30.26-72.52-58.14-39.44-57-69.59-161.14-29.11-231.42,20.1-34.9,56-57,95-57.57,29.67-.56,57.67,20,75.81,20s52.15-24.68,87.92-21.05c15,.62,57,6,84,45.56-2.17,1.34-50.16,29.28-49.64,87.39M323.55,99.68c16-19.42,26.84-46.45,23.89-73.34-23.12.93-51.08,15.41-67.66,34.81-14.86,17.19-27.88,44.69-24.36,71,25.77,2,52.09-13.09,68.13-32.52"/></svg><p class="smaller bold">App Store</p></a>
+          <a href="https://play.google.com" title="Play Store Download" class="btn btn--primary btn--download header__download"><svg data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.cls-1{fill:#868e96;}</style></defs><title>play-store</title><path class="cls-1" d="M316.8,331.53,434.4,263a9,9,0,0,0,4.5-7.72,9.14,9.14,0,0,0-4.58-7.82L307.37,174.92,85.58,48.17A9.07,9.07,0,0,0,72.1,56s.08,11.69.18,30.93c.27,69.39,1.08,237.77,1.43,321.69l-.08.08c.18,29.94.27,49.09.27,49.09a8.76,8.76,0,0,0,4.5,7.73,9,9,0,0,0,9,0L316.9,331.63Z"/></svg><p class="smaller bold">Google Play</p></a>
+        </div>
+        <div class="header__img">
+          <img src="assets/img/mobile-ph.png" class="header__mobile" alt="List Mobile" title="List Mobile">
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <section class="content">
+      <section class="features wrapper">
+        <h3 class="features__title h2">Warum du List nutzen solltest:</h3>
+        <div class="features__container">
+          <div class="features__item">
+            <i class="material-icons features__icon">category</i>
+            <p class="features__text">Einfache Bedienung die intuitiv funktioniert. Nur die Funktionen die du wirklich benötigst. Weil das Leben sonst schon genug kompliziert ist.</p>
+          </div>
+          <div class="features__item">
+            <i class="material-icons features__icon">mood</i>
+            <p class="features__text">Alle Basisfeatures sind gratis. Damit kannst du List ohne Einschränkungen kostenlos nutzen, und zwar für immer!</p>
+          </div>
+          <div class="features__item">
+            <i class="material-icons features__icon">devices_other</i>
+            <p class="features__text">Auf allen Plattformen verfügbar die du benötigst. Als App oder im Web. Damit du immer den Überblick behältst, egal wo du bist.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="showcase">
+        <div class="showcase__wrapper wrapper">
+          <img src="assets/img/mobile-ph.png" alt="Taskuebersicht" title="Taskuebersicht" class="showcase__img">
+          <div class="showcase__text">
+            <p class="bigger brand showcase__subtitle">Nie mehr etwas vergessen</p>
+            <h3 class="showcase__title h2">Einfache Taskübersicht</h3>
+            <p class="showcase__desc">Wie nützlich eine Todo App im Alltag wirklich ist, hängt vor allem damit zusammen, wie gut man sich zurechtfindet. Darum haben wir uns besonders viel Mühe gegeben, die Aufgabenübersicht so simpel und übersichtlich wie möglich zu gestalten. Damit bist du immer auf dem Laufenden und musst dir nie mehr Sorgen, die wichtige Abgabe oder den nächsten Termin zu verpassen.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase">
+        <div class="showcase__wrapper wrapper">
+          <img src="assets/img/mobile-ph.png" alt="Design" title="Design" class="showcase__img">
+          <div class="showcase__text">
+            <p class="bigger brand showcase__subtitle">Macht Todolisten wieder attraktiv</p>
+            <h3 class="showcase__title h2">Simples Design</h3>
+            <p class="showcase__desc">Es gibt bereits genug überfüllte Todo Apps da draussen, die nicht wirklich praktisch zum Benutzen sind. Wir gehen da einen anderen Weg und haben ein Design entwickelt, das so minimalistisch wie möglich ist und dabei noch gut aussieht. So macht die Aufgabenverwaltung wieder Spass.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <h3 class="reviews__title wrapper">Was Leute über uns sagen:</h3>
+        <div class="reviews__slider">
+          <div class="reviews__item">
+            <p class="reviews__text">Wirklich die beste Todo App die ich je benutzt habe! Die Bedienung ist sehr intuitiv und man hat stets eine gute Übersicht über seine Aufgaben. Zudem sieht die App auch noch gut aus, würde ich sofort weiterempfehlen!</p>
+            <div class="reviews__person">
+              <img src="assets/img/avatar-max.jpg" alt="Max Mustermann" title="Max Mustermann" class="reviews__portrait">
+              <div class="reviews__details">
+                <p class="reviews__name smaller bold">Max Mustermann</p>
+                <p class="reviews__rating smaller brand"><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i></p>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__item">
+            <p class="reviews__text">Normalerweise benutze ich Todolisten nicht wirklich regelmässig, doch mit dieser App verwalte ich nun täglich meine Aufgaben. Es macht wirklich Spass sie zu benutzen! Mit der Gratisversion kommt man übrigens auch sehr gut zurecht.</p>
+            <div class="reviews__person">
+              <img src="assets/img/avatar-tamara.jpg" alt="Tamara Test" title="Tamara Test" class="reviews__portrait">
+              <div class="reviews__details">
+                <p class="reviews__name smaller bold">Tamara Test</p>
+                <p class="reviews__rating smaller brand"><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i></p>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__item">
+            <p class="reviews__text">Super App, benutze sie täglich. Einfach und simpel, genau das, was ich brauche.</p>
+            <div class="reviews__person">
+              <img src="assets/img/avatar-nicole.jpg" alt="Nicole Nutzerin" title="Nicole Nutzerin" class="reviews__portrait">
+              <div class="reviews__details">
+                <p class="reviews__name smaller bold">Nicole Nutzerin</p>
+                <p class="reviews__rating smaller brand"><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer__content wrapper">
+        <div class="footer__btns">
+            <a href="https://itunes.apple.com/ch/store" title="App Store Download" class="btn btn--primary btn--download footer__download"><svg data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.cls-1{fill:#868e96;}</style></defs><title>app-store</title><path class="cls-1" d="M381.35,270.36c.65,69.51,61,92.64,61.65,92.94a251.39,251.39,0,0,1-31.79,65.33c-19.14,28-39,55.85-70.31,56.43-30.75.57-40.64-18.24-75.81-18.24S219,484.49,189.84,485.63c-30.21,1.14-53.22-30.26-72.52-58.14-39.44-57-69.59-161.14-29.11-231.42,20.1-34.9,56-57,95-57.57,29.67-.56,57.67,20,75.81,20s52.15-24.68,87.92-21.05c15,.62,57,6,84,45.56-2.17,1.34-50.16,29.28-49.64,87.39M323.55,99.68c16-19.42,26.84-46.45,23.89-73.34-23.12.93-51.08,15.41-67.66,34.81-14.86,17.19-27.88,44.69-24.36,71,25.77,2,52.09-13.09,68.13-32.52"/></svg><p class="smaller bold">App Store</p></a>
+            <a href="https://play.google.com" title="Play Store Download" class="btn btn--primary btn--download footer__download"><svg data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.cls-1{fill:#868e96;}</style></defs><title>play-store</title><path class="cls-1" d="M316.8,331.53,434.4,263a9,9,0,0,0,4.5-7.72,9.14,9.14,0,0,0-4.58-7.82L307.37,174.92,85.58,48.17A9.07,9.07,0,0,0,72.1,56s.08,11.69.18,30.93c.27,69.39,1.08,237.77,1.43,321.69l-.08.08c.18,29.94.27,49.09.27,49.09a8.76,8.76,0,0,0,4.5,7.73,9,9,0,0,0,9,0L316.9,331.63Z"/></svg><p class="smaller bold">Google Play</p></a>
+        </div>
+        <div class="footer__links">
+          <a href="kontakt.html" title="Kontakt">Kontakt</a>
+          <a href="impressum.html" title="Impressum">Impressum</a>
+        </div>
+      </div>
+      <p class="smaller footer__copyright">Copyright 2018 by Dominik Hofer</p>
+    </footer>
+
+  </main>
+
+<!-- JS -->
+<script src="assets/js/vendors.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,45 @@
+// #######################################
+// Buttons
+// #######################################
+
+.btn {
+  padding: 0.8em 1em;
+  color: $brand;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5em;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $brand-dark;
+  }
+
+  &--primary {
+    color: $background;
+    background-color: $brand;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+
+    &:hover {
+        color: $background;
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &--download {
+    p {
+      margin: 0;
+      padding-left: 0.8em;
+    }
+
+    svg {
+      height: 1.3em;
+
+      path {
+        fill: $background;
+      }
+    }
+  }
+}

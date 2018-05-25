@@ -10,7 +10,5 @@ html {
 
 body {
     background-color: $background;
-    background-attachment: fixed;
-    background-image: url('../img/bg-pattern.svg');
-    background-size: 20px;
+    overflow-x: hidden;
 }

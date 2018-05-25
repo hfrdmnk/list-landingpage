@@ -25,6 +25,7 @@
     "autoprefixer": "^8.5.0",
     "browser-sync": "^2.24.4",
     "cssnano": "^3.10.0",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^4.1.0",
@@ -32,6 +33,7 @@
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0"
   }
 }
