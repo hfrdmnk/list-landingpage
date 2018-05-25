@@ -1,0 +1,88 @@
+// #######################################
+// Home
+// #######################################
+
+// Features
+
+.features {
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    padding: 20px 0;
+  }
+
+  &__text {
+    margin-top: 0;
+  }
+
+  &__icon {
+    font-size: 64px;
+    color: $brand;
+  }
+}
+
+// Reviews
+
+.reviews {
+  background: $brand;
+  background: linear-gradient(45deg, $brand-dark 0%, $brand 100%);
+
+  &__title {
+    color: $background;
+    margin-bottom: 28px;
+  }
+
+  &__item {
+    text-align: left;
+    background-color: $background;
+    padding: 40px;
+    border-radius: 0.8em;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+    margin: 0 20px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    text-indent: -0.6em;
+
+    &::before {
+      content: '«';
+      display: inline-block;
+      font-weight: $font-bold;
+      color: $brand;
+      font-size: 1.5em;
+      margin-right: 0.2em;
+    }
+
+    &::after {
+      content: '»';
+      display: inline-block;
+      text-indent: 0em;
+    }
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+  }
+
+  &__portrait {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin-right: 1em;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: flex-start;
+
+    i {
+      display: inline;
+      font-size: inherit;
+      width: 1.2em;
+    }
+  }
+}

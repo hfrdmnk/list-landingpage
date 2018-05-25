@@ -1,0 +1,19 @@
+// #######################################
+// Showcase
+// #######################################
+
+.showcase {
+  &__img {
+    width: 70vw;
+    max-width: 375px;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+}

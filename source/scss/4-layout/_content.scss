@@ -1,0 +1,14 @@
+// #######################################
+// Content
+// #######################################
+
+.content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  > section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+  }
+}
