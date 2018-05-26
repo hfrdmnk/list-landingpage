@@ -86,3 +86,45 @@
     }
   }
 }
+
+// Breakpoint 
+
+@include breakpoint(small) {
+  // Features
+
+  .features {
+    &__icon {
+      font-size: 96px;
+      margin-right: 40px;
+      padding: 0 40px;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@include breakpoint(small) {
+  // Features
+
+  .features {
+    &__container {
+      display: flex;
+    }
+    
+    &__item {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &__icon {
+      margin: 40px 0;
+    }
+  }
+}

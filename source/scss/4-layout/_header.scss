@@ -69,4 +69,42 @@ header {
     width: 70vw;
     max-width: 600px;
   }
+
+  &__desktop {
+    display: none;
+  }
+}
+
+// Breakpoint
+
+@include breakpoint(small) {
+  .header {
+    &__btns {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__download.btn {
+      margin: 10px;
+    }
+
+    &__img {
+      height: 40vh;
+    }
+
+    &__mobile {
+      display: block;
+      z-index: 10;
+      width: 25vw;
+      max-width: 500px;
+      margin-left: 20vw;
+      margin-top: 10vh;
+    }
+
+    &__desktop {
+      display: block;
+      width: 80vw;
+      max-width: 1140px;
+    }
+  }
 }

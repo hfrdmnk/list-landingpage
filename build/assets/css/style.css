@@ -57,6 +57,7 @@ html {
 
 body {
   background-color: #FFFFFF;
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -218,15 +219,19 @@ a {
 
 .wrapper {
   max-width: 1140px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.wrapper--small {
+  max-width: 840px;
+}
+
 .wrapper-padding {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 header {
@@ -297,6 +302,36 @@ header .wrapper-padding {
   max-width: 600px;
 }
 
+.header__desktop {
+  display: none;
+}
+
+@media screen and (min-width: 52.5em) {
+  .header__btns {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .header__download.btn {
+    margin: 10px;
+  }
+  .header__img {
+    height: 40vh;
+  }
+  .header__mobile {
+    display: block;
+    z-index: 10;
+    width: 25vw;
+    max-width: 500px;
+    margin-left: 20vw;
+    margin-top: 10vh;
+  }
+  .header__desktop {
+    display: block;
+    width: 80vw;
+    max-width: 1140px;
+  }
+}
+
 .main-nav {
   position: absolute;
   top: 0;
@@ -312,8 +347,8 @@ header .wrapper-padding {
 .main-nav__content {
   height: 100%;
   width: 100vw;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -325,8 +360,8 @@ header .wrapper-padding {
 .main-nav__close {
   cursor: pointer;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 40px;
+  top: 40px;
   height: 40px;
   width: 40px;
   -webkit-transform: rotate(45deg);
@@ -424,6 +459,7 @@ header .wrapper-padding {
   justify-content: space-between;
   width: 70px;
   height: 100vh;
+  background-color: #FFFFFF;
 }
 
 .main-nav__btn {
@@ -466,7 +502,74 @@ header .wrapper-padding {
           transform: translateX(100vw);
 }
 
+@media screen and (min-width: 90em) {
+  .main-nav {
+    position: fixed;
+    width: 110vw;
+    transition-duration: 1.2s;
+  }
+  .main-nav .logo {
+    align-self: flex-start;
+  }
+  .main-nav .menu {
+    flex-direction: row;
+    min-width: 40vw;
+    justify-content: space-between;
+  }
+  .main-nav .menu > li {
+    text-align: left;
+  }
+  .main-nav .menu > li > ul {
+    position: absolute;
+    padding-left: 20px;
+  }
+  .main-nav .menu > li i {
+    top: -0.1em;
+  }
+  .main-nav .menu > li:not(:last-child) {
+    margin-right: 40px;
+  }
+  .main-nav__sidebar {
+    padding: 40px;
+    width: 10vw;
+    align-items: center;
+  }
+  .main-nav__current {
+    display: block;
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .main-nav__arrow {
+    display: block;
+    padding: 0 1em;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
+  .main-nav__arrow.turn {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .main-nav__btn {
+    margin: 0;
+  }
+  .main-nav__btn span {
+    background-color: #343a40;
+  }
+  .main-nav .social {
+    flex-direction: row;
+    align-items: center;
+  }
+  .main-nav .social__text {
+    margin-right: 20px;
+  }
+}
+
 .content {
+  margin-top: 1px;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -475,6 +578,24 @@ header .wrapper-padding {
   padding-top: 80px;
   padding-bottom: 80px;
   text-align: center;
+}
+
+@media screen and (min-width: 52.5em) {
+  .content > section {
+    text-align: left;
+  }
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4 {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  main {
+    margin-left: 10vw;
+  }
 }
 
 footer {
@@ -518,6 +639,22 @@ footer {
   padding: 20px 0;
 }
 
+@media screen and (min-width: 52.5em) {
+  .footer__btns {
+    flex-direction: row;
+  }
+  .footer__download.btn {
+    margin: 10px;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .footer__content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .btn {
   padding: 0.8em 1em;
   color: #2575fc;
@@ -559,6 +696,10 @@ footer {
   fill: #FFFFFF;
 }
 
+.showcase__bg {
+  display: none;
+}
+
 .showcase__img {
   width: 70vw;
   max-width: 375px;
@@ -571,6 +712,66 @@ footer {
 
 .showcase__title {
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 52.5em) {
+  .showcase {
+    position: relative;
+  }
+  .showcase__bg {
+    display: block;
+    position: absolute;
+    top: 20%;
+    background: #2575fc;
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+    width: 80%;
+    height: 35%;
+    z-index: -1;
+  }
+  .showcase__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .showcase__img {
+    width: 30vw;
+    align-self: flex-end;
+    margin-right: 40px;
+    margin-bottom: -3em;
+  }
+  .showcase__title {
+    text-align: left !important;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .showcase:nth-child(2n + 1) .showcase__img {
+    order: 1;
+    margin-left: 40px;
+    margin-right: 0;
+  }
+  .showcase:nth-child(2n + 1) .showcase__bg {
+    right: 0;
+  }
+  .showcase__bg {
+    top: 80px;
+    width: 35%;
+    height: 50%;
+  }
+  .showcase__wrapper {
+    padding-top: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .showcase__img {
+    margin-right: 40px;
+    margin-bottom: 0;
+    width: 15vw;
+  }
+  .showcase__text {
+    width: 66.66%;
+    align-self: flex-end;
+    margin-bottom: 10%;
+  }
 }
 
 .features__title {
@@ -650,4 +851,32 @@ footer {
   display: inline;
   font-size: inherit;
   width: 1.2em;
+}
+
+@media screen and (min-width: 52.5em) {
+  .features__icon {
+    font-size: 96px;
+    margin-right: 40px;
+    padding: 0 40px;
+  }
+  .features__item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 52.5em) {
+  .features__container {
+    display: flex;
+  }
+  .features__item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .features__item:not(:last-child) {
+    margin-right: 40px;
+  }
+  .features__icon {
+    margin: 40px 0;
+  }
 }

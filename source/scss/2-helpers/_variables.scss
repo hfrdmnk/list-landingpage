@@ -21,11 +21,12 @@ $background: $white;
 // Layout
 // #######################################
 
+$wrapper--small: 840px;
 $wrapper: 1140px;
-$wrapper-padding: 20px;
+$wrapper-padding: 40px;
 
 $breakpoint-small: 52.500em; // 840px
-$breakpoint-medium: 73.750em; // 1180px 
+$breakpoint-medium: 71.250em; // 1140px 
 $breakpoint-large: 90.000em; // 1440px
 
 // #######################################

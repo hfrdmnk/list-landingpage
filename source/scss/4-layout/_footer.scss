@@ -44,3 +44,26 @@ footer {
     padding: 20px 0;
   }
 }
+
+// Breakpoint 
+
+@include breakpoint(small) {
+  .footer {
+    &__btns {
+      flex-direction: row;
+    }
+
+    &__download.btn {
+      margin: 10px;
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .footer {
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

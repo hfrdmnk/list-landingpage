@@ -39,11 +39,3 @@
 	  @warn "Breakpoint mixin supports: small, medium, normal";
 	}
 }
-
-// CSS Grid
-
-@mixin grid() {
-	@supports (grid-area: auto) {
-		@content;
-	}
-}

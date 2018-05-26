@@ -3,6 +3,10 @@
 // #######################################
 
 .showcase {
+  &__bg {
+    display: none;
+  }
+
   &__img {
     width: 70vw;
     max-width: 375px;
@@ -15,5 +19,82 @@
 
   &__title {
     margin-bottom: 20px;
+  }
+}
+
+// Breakpoint
+
+@include breakpoint(small) {
+  .showcase {
+    position: relative;
+
+    &__bg {
+      display: block;
+      position: absolute;
+      top: 20%;
+      background: $brand;
+      background: linear-gradient(45deg, $brand-dark 0%, $brand 100%);
+      width: 80%;
+      height: 35%;
+      z-index: -1;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__img {
+      width: 30vw;
+      align-self: flex-end;
+      margin-right: 40px;
+      margin-bottom: -3em;
+    }
+
+    &__title {
+      text-align: left !important;
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .showcase {
+    &:nth-child(2n + 1) {
+      .showcase {
+        &__img {
+          order: 1;
+          margin-left: 40px;
+          margin-right: 0;
+        }
+
+        &__bg {
+          right: 0;
+        }
+      }
+    }
+
+    &__bg {
+      top: 80px;
+      width: 35%;
+      height: 50%;
+    }
+
+    &__wrapper {
+      padding-top: 40px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__img {
+      margin-right: 40px;
+      margin-bottom: 0;
+      width: 15vw;
+    }
+
+    &__text {
+      width: 66.66%;
+      align-self: flex-end;
+      margin-bottom: 10%;
+    }
   }
 }

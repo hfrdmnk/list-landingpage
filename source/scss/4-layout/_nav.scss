@@ -16,21 +16,21 @@
   &__content {
     height: 100%;
     width: 100vw;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: $wrapper-padding;
+    padding-bottom: $wrapper-padding;
     background-color: $background;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    position: relative
+    position: relative;
   }
 
   &__close {
     cursor: pointer;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: $wrapper-padding;
+    top: $wrapper-padding;
     height: 40px;
     width: 40px;
     transform: rotate(45deg);
@@ -125,6 +125,7 @@
     justify-content: space-between;
     width: 70px;
     height: 100vh;
+    background-color: $background;
   }
 
   &__btn {
@@ -165,5 +166,81 @@
 .menu-open {
   .main-nav {
     transform: translateX(100vw);
+  }
+}
+
+// Breakpoint
+
+@include breakpoint(large) {
+  .main-nav {
+    position: fixed;
+    width: 110vw;
+    transition-duration: 1.2s;
+
+    .logo {
+      align-self: flex-start;
+    }
+
+    .menu {
+      flex-direction: row;
+      min-width: 40vw;
+      justify-content: space-between;
+
+      > li {
+        text-align: left;
+
+        > ul {
+          position: absolute;
+          padding-left: 20px;
+        }
+
+        i {
+          top: -0.1em;
+        }
+      }
+
+      > li:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+
+    &__sidebar {
+      padding: $wrapper-padding;
+      width: 10vw;
+      align-items: center;
+    }
+
+    &__current {
+      display: block;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+    }
+  
+    &__arrow {
+      display: block;
+      padding: 0 1em;
+      transition: transform 0.3s ease;
+
+      &.turn {
+        transform: rotate(180deg);
+      }
+    }
+
+    &__btn {
+      margin: 0;
+
+      span {
+        background-color: $font-color;
+      }
+    }
+
+    .social {
+      flex-direction: row;
+      align-items: center;
+      
+      &__text {
+        margin-right: 20px;
+      }
+    }
   }
 }

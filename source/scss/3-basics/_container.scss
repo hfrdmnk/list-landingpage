@@ -6,6 +6,10 @@
     padding-right: $wrapper-padding;
     margin-left: auto;
     margin-right: auto;
+
+    &--small {
+        max-width: $wrapper--small;
+    }
 }
 
 .wrapper-padding {
