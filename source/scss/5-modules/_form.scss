@@ -1,0 +1,136 @@
+// #######################################
+// Form
+// #######################################
+
+.form {
+  &__row:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    input:not([type=submit]),
+    select {
+      background-color: $background;
+      border: none;
+      align-self: stretch;
+      font-size: 1em;
+      padding: 0.8em 1em;
+      border-radius: 0.5em;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+      font-family: inherit;
+      transition: all 0.3s ease;
+
+      &:focus {
+        transform: scale(1.05);
+        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.15);
+        outline: none;
+      }
+
+      &:focus + label {
+        color: $brand;
+      }
+    }
+
+    input[type=submit] {
+      border: none;
+      font-size: 1em;
+      font-family: inherit;
+    }
+
+    ::placeholder {
+      font-size: 0.9em;
+      color: $font-light-color;
+    }
+
+    label {
+      order: -1;
+      font-size: 0.8em;
+      margin-bottom: 8px;
+      transition: color 0.3s ease;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+// Breakpoint 
+
+@include breakpoint(small) {
+  .form {
+    &__item {
+      flex-direction: row;
+      align-items: center;
+
+      input:not([type=submit]),
+      select {
+        flex: 1;
+      }
+
+      input[type=submit] {
+        margin-left: calc(30% + 20px);
+      }
+
+      label {
+        min-width: 30%;
+        margin: 0;
+        margin-right: 20px;
+        font-size: 1em;
+
+        .required {
+          color: $brand;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .form {
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      > * > * {
+        width: 100%;
+      }
+    }
+
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 0 !important;
+
+      &--1-3 {
+        width: 32%;
+      }
+
+      &--2-3 {
+        width: 64%;
+      }
+
+      &--1-2 {
+        width: 49.5%;
+      }
+
+      input[type=submit] {
+        margin: 0;
+      }
+
+      &:first-child input[type=submit] {
+        width: auto;
+      }
+
+      label {
+        font-size: 0.8em;
+        margin-bottom: 8px;
+      }
+    }
+  }  
+}

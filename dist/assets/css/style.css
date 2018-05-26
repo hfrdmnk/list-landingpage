@@ -1,5 +1,9 @@
 @charset "UTF-8";
-/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+/* ####################################### 
+  External Tools 
+  ####################################### */
+/* CSS Reset */
+/* minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -45,6 +49,10 @@ td, th {
   text-align: left;
 }
 
+/* ####################################### 
+  Basics
+  ####################################### */
+/* Base CSS */
 html {
   box-sizing: border-box;
 }
@@ -72,6 +80,7 @@ body {
   background-color: #2575fc;
 }
 
+/* Typography */
 :root {
   font-size: 16px;
 }
@@ -239,6 +248,7 @@ a {
   color: #2575fc;
 }
 
+/* Container */
 .wrapper {
   max-width: 1140px;
   padding-left: 40px;
@@ -260,6 +270,10 @@ a {
   padding-right: 40px;
 }
 
+/* ####################################### 
+  Layout 
+  ####################################### */
+/* Header */
 header {
   height: 100vh;
   min-height: 550px;
@@ -371,6 +385,7 @@ header > .wrapper {
   }
 }
 
+/* Navigation */
 .main-nav {
   position: absolute;
   top: 0;
@@ -607,6 +622,7 @@ header > .wrapper {
   }
 }
 
+/* Content */
 .content {
   margin-top: 1px;
   padding-top: 40px;
@@ -645,6 +661,7 @@ header > .wrapper {
   }
 }
 
+/* Footer */
 footer {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -702,6 +719,10 @@ footer {
   }
 }
 
+/* ####################################### 
+  Modules 
+  ####################################### */
+/* Buttons */
 .btn {
   padding: 0.8em 1em;
   color: #2575fc;
@@ -743,6 +764,139 @@ footer {
   fill: #FFFFFF;
 }
 
+/* Form */
+.form__row:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form__item input:not([type=submit]),
+.form__item select {
+  background-color: #FFFFFF;
+  border: none;
+  align-self: stretch;
+  font-size: 1em;
+  padding: 0.8em 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form__item input:not([type=submit]):focus,
+.form__item select:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.form__item input:not([type=submit]):focus + label,
+.form__item select:focus + label {
+  color: #2575fc;
+}
+
+.form__item input[type=submit] {
+  border: none;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+.form__item ::-webkit-input-placeholder {
+  font-size: 0.9em;
+  color: #868e96;
+}
+
+.form__item :-ms-input-placeholder {
+  font-size: 0.9em;
+  color: #868e96;
+}
+
+.form__item ::-ms-input-placeholder {
+  font-size: 0.9em;
+  color: #868e96;
+}
+
+.form__item ::placeholder {
+  font-size: 0.9em;
+  color: #868e96;
+}
+
+.form__item label {
+  order: -1;
+  font-size: 0.8em;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.form__item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 52.5em) {
+  .form__item {
+    flex-direction: row;
+    align-items: center;
+  }
+  .form__item input:not([type=submit]),
+  .form__item select {
+    flex: 1;
+  }
+  .form__item input[type=submit] {
+    margin-left: calc(30% + 20px);
+  }
+  .form__item label {
+    min-width: 30%;
+    margin: 0;
+    margin-right: 20px;
+    font-size: 1em;
+  }
+  .form__item label .required {
+    color: #2575fc;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .form__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .form__row > * > * {
+    width: 100%;
+  }
+  .form__item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0 !important;
+  }
+  .form__item--1-3 {
+    width: 32%;
+  }
+  .form__item--2-3 {
+    width: 64%;
+  }
+  .form__item--1-2 {
+    width: 49.5%;
+  }
+  .form__item input[type=submit] {
+    margin: 0;
+  }
+  .form__item:first-child input[type=submit] {
+    width: auto;
+  }
+  .form__item label {
+    font-size: 0.8em;
+    margin-bottom: 8px;
+  }
+}
+
+/* Features */
 .features__title {
   margin-bottom: 20px;
 }
@@ -791,6 +945,7 @@ footer {
   }
 }
 
+/* Showcase */
 .showcase__bg {
   display: none;
 }
@@ -870,6 +1025,10 @@ footer {
   }
 }
 
+/* ####################################### 
+  Pages 
+  ####################################### */
+/* Home */
 .home .reviews {
   background: #2575fc;
   background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
@@ -932,6 +1091,7 @@ footer {
   width: 1.2em;
 }
 
+/* Features */
 .app-features .comparison {
   background: #2575fc;
   background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
@@ -963,6 +1123,7 @@ footer {
   margin-top: 28px;
 }
 
+/* Pricing */
 .pricing .price-table {
   background: #2575fc;
   background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
@@ -1076,6 +1237,31 @@ footer {
   }
 }
 
+/* Download */
+.download .dl-link {
+  background: #2575fc;
+  background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.download .dl-link__title {
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+
+.download .dl-link label {
+  color: #FFFFFF !important;
+}
+
+.download .dl-link label .required {
+  color: #FFFFFF;
+}
+
+.download .dl-link input[type=submit] {
+  color: #2575fc !important;
+  background-color: #fff;
+}
+
+/* Impressum */
 .impressum .content > section {
   text-align: center !important;
 }

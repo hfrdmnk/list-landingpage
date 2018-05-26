@@ -2,34 +2,71 @@
 // Main CSS File
 // #######################################
 
-// This file is only for importing all partial css. Do NOT write any css here!
+// This file imports all *.scss files
 
-// 1 Tools
+/* ####################################### 
+  External Tools 
+  ####################################### */
+
+/* CSS Reset */
 @import '1-tools/minireset';
 
-// 2 Helpers
+// ####################################### 
+// Helpers
+// #######################################
+
 @import '2-helpers/variables';
 @import '2-helpers/functions';
 @import '2-helpers/mixins';
 
-// 3 Basics
+/* ####################################### 
+  Basics
+  ####################################### */
+
+/* Base CSS */
 @import '3-basics/base';
+/* Typography */
 @import '3-basics/typography';
+/* Container */
 @import '3-basics/container';
 
-// 4 Layout
+/* ####################################### 
+  Layout 
+  ####################################### */
+
+/* Header */
 @import '4-layout/header';
+/* Navigation */
 @import '4-layout/nav';
+/* Content */
 @import '4-layout/content';
+/* Footer */
 @import '4-layout/footer';
 
-// 5 Modules
+/* ####################################### 
+  Modules 
+  ####################################### */
+
+/* Buttons */
 @import '5-modules/btns';
+/* Form */
+@import '5-modules/form';
+/* Features */
 @import '5-modules/features';
+/* Showcase */
 @import '5-modules/showcase';
 
-// 6 Pages
+/* ####################################### 
+  Pages 
+  ####################################### */
+
+/* Home */
 @import '6-pages/home';
+/* Features */
 @import '6-pages/features';
+/* Pricing */
 @import '6-pages/pricing';
+/* Download */
+@import '6-pages/download';
+/* Impressum */
 @import '6-pages/impressum';
