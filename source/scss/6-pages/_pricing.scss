@@ -1,0 +1,147 @@
+// #######################################
+// Pricing
+// #######################################
+
+.pricing {
+
+  // Price Table
+
+  .price-table {
+    background: $brand;
+    background: linear-gradient(45deg, $brand-dark 0%, $brand 100%);
+
+    &__title {
+      color: $background;
+      margin-bottom: 40px;
+    }
+
+    &__item {
+      background-color: $background;
+      padding: 40px;
+      border-radius: 0.8em;
+      box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    &__heading {
+      padding-bottom: 20px;
+    }
+
+    &__icon {
+      font-size: 3em;
+    }
+
+    &__item-title {
+      margin: 0;
+    }
+
+    &__btn {
+      margin: 20px 0;
+    }
+
+    &__table {
+      width: 100%;
+      text-align: center;
+      padding-top: 20px;
+
+      tr:nth-child(2n) {
+        background-color: rgba($brand, 0.1);
+        box-shadow: 40px 0 0 0 rgba($brand, 0.1),
+                    -40px 0 0 0 rgba($brand, 0.1);
+      }
+
+      td {
+        padding: 12px 0;
+        text-align: center;
+      }
+    }
+
+    &__feature {
+      margin-top: 0;
+    }
+
+  }
+
+  // Breakpoint 
+
+  @include breakpoint(small) {
+    // Price Table
+
+    .price-table {
+      &__item {
+        display: flex;
+      }
+
+      &__heading {
+        min-width: 33.33%;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-bottom: 0;
+      }
+
+      &__icon {
+        margin-left: -0.2em;
+        margin-bottom: 20px;
+      }
+
+      &__content {
+        width: 100%;
+      }
+
+      &__table {
+        padding: 0;
+
+        tr:nth-child(2n) {
+          box-shadow: 40px 0 0 0 rgba($brand, 0.1);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    // Price Table
+
+    .price-table {
+      &__container {
+        display: flex;
+        align-items: center;
+      }
+
+      &__item {
+        width: 50%;
+        display: block;
+      }
+
+      &__item--premium {
+        margin-left: -1px;
+        box-shadow: 5px 5px 10px 0 rgba(0,0,0,.15);
+      }
+
+      &__item:not(.price-table__item--premium) {
+        margin-top: -25px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &__heading {
+        display: block;
+        text-align: center;
+        margin: 0;
+      }
+
+      &__table {
+        tr:nth-child(2n) {
+          box-shadow: 40px 0 0 0 rgba($brand, 0.1),
+                    -40px 0 0 0 rgba($brand, 0.1);
+        }
+      }
+    }
+  }
+
+}

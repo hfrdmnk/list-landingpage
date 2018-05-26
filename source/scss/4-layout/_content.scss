@@ -12,6 +12,20 @@
     padding-bottom: 80px;
     text-align: center;
   }
+
+  > h1,
+  > h2,
+  > h3,
+  > h4 {
+    padding-top: 80px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-align: center;
+  }
 }
 
 // Breakpoint
@@ -20,13 +34,6 @@
   .content {
     > section {
       text-align: left;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
-      text-align: center;
     }
   }
 }
