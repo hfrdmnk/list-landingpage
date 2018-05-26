@@ -453,7 +453,7 @@ header .wrapper-padding {
 }
 
 .main-nav__sidebar {
-  padding: 20px 0;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
