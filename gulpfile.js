@@ -18,15 +18,15 @@ var autoprefixer = require('autoprefixer'),
 
 // paths
 var styleSrc = 'source/scss/**/*.scss',
-    styleDest = 'build/assets/css/',
+    styleDest = 'dist/assets/css/',
     htmlSrc = 'source/*.html',
-    htmlDest = 'build/',
+    htmlDest = 'dist/',
     vendorSrc = 'source/js/vendors/',
-    vendorDest = 'build/assets/js/',
+    vendorDest = 'dist/assets/js/',
     scriptSrc = 'source/js/*.js',
-    scriptDest = 'build/assets/js/',
+    scriptDest = 'dist/assets/js/',
     imgSrc = 'source/img/**/*',
-    imgDest = 'build/assets/img/*';
+    imgDest = 'dist/assets/img/*';
 
 
 
@@ -39,7 +39,7 @@ var styleSrc = 'source/scss/**/*.scss',
 gulp.task('html', function() {
     return gulp.src('source/**/*.html')
         .pipe(plumber())
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('dist'));
 });
 
 
@@ -54,13 +54,13 @@ gulp.task('sass', function() {
         .pipe(rename({
             basename: 'style'
         }))
-        .pipe(gulp.dest('build/assets/css'))
+        .pipe(gulp.dest('dist/assets/css'))
         .pipe(postcss([cssnano()]))
         .pipe(rename({
             basename: 'style',
             suffix: '.min'
         }))
-        .pipe(gulp.dest('build/assets/css'));
+        .pipe(gulp.dest('dist/assets/css'));
 });
 
 // Images
@@ -68,7 +68,7 @@ gulp.task('images', function() {
     gulp.src('source/img/*')
         .pipe(plumber())
         .pipe(images())
-        .pipe(gulp.dest('build/assets/img'));
+        .pipe(gulp.dest('dist/assets/img'));
 });
 
 // Uglify js files
@@ -77,7 +77,7 @@ gulp.task('scripts', function() {
         .pipe(plumber())
         .pipe(concat('script.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('build/assets/js'));
+        .pipe(gulp.dest('dist/assets/js'));
 });
 
 //Concat and Compress Vendor .js files
@@ -89,7 +89,7 @@ gulp.task('vendors', function() {
             ])
         .pipe(concat('vendors.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('build/assets/js'));
+        .pipe(gulp.dest('dist/assets/js'));
 });
 
 
@@ -100,7 +100,7 @@ gulp.task('watch', function(){
     // Serve files from the root of this project
     browserSync.init({
         server: {
-            baseDir: "./build"
+            baseDir: "./dist"
         },
         notify: false
     });
@@ -110,7 +110,7 @@ gulp.task('watch', function(){
     gulp.watch(styleSrc,['sass']);
     gulp.watch(scriptSrc,['scripts']);
     gulp.watch(vendorSrc,['vendors']);
-    gulp.watch(['build/*.html', 'build/assets/css/*.css', 'build/assets/js/*.js', 'build/assets/js/vendors/*.js']).on('change', browserSync.reload);
+    gulp.watch(['dist/*.html', 'dist/assets/css/*.css', 'dist/assets/js/*.js', 'dist/assets/js/vendors/*.js']).on('change', browserSync.reload);
 
 });
 

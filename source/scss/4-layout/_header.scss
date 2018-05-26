@@ -19,6 +19,21 @@ header {
 }
 
 .header {
+  &--small {
+    height: 500px;
+    min-height: 500px;
+
+    .wrapper-padding {
+      justify-content: center;
+    }
+
+    .header {
+      &__text {
+        margin: 0;
+      }
+    }
+  }
+
   &__text {
     margin-top: 20vh;
   }

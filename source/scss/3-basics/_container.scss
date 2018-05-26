@@ -9,6 +9,10 @@
 
     &--small {
         max-width: $wrapper--small;
+        padding-left: $wrapper-padding;
+        padding-right: $wrapper-padding;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

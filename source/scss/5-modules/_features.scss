@@ -1,0 +1,63 @@
+// #######################################
+// Features
+// #######################################
+
+.features {
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    padding: 20px 0;
+  }
+
+  &__text {
+    margin-top: 0;
+  }
+
+  &__icon {
+    font-size: 64px;
+    color: $brand;
+  }
+}
+
+// Breakpoint 
+
+@include breakpoint(small) {
+  .features {
+    &__icon {
+      font-size: 96px;
+      margin-right: 40px;
+      padding: 0 40px;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .features {
+    &__container {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    &__item {
+      width: 33.33%;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__item:not(:last-child) {
+      padding-right: 40px;
+    }
+
+    &__icon {
+      margin: 40px 0;
+    }
+  }
+}

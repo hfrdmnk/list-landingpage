@@ -1,0 +1,41 @@
+// #######################################
+// Features
+// #######################################
+
+.app-features {
+
+  // Comparison
+
+  .comparison {
+    background: $brand;
+    background: linear-gradient(45deg, $brand-dark 0%, $brand 100%);
+
+    &__title {
+      color: $background;
+      margin-bottom: 40px;
+    }
+
+    &__v-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 25px;
+      height: 0;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__copyright {
+      text-align: center;
+      color: $background;
+      margin-top: 28px;
+    }
+
+  }
+
+}
