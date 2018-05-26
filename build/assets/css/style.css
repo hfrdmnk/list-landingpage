@@ -459,7 +459,6 @@ header .wrapper-padding {
   justify-content: space-between;
   width: 70px;
   height: 100vh;
-  background-color: #FFFFFF;
 }
 
 .main-nav__btn {
@@ -533,6 +532,7 @@ header .wrapper-padding {
     padding: 40px;
     width: 10vw;
     align-items: center;
+    background-color: #FFFFFF;
   }
   .main-nav__current {
     display: block;
