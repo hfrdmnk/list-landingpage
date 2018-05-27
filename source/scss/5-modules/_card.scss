@@ -1,0 +1,154 @@
+// #######################################
+// Cards
+// #######################################
+
+.cards {
+  &__item {
+    background-color: $background;
+    border-radius: 0.8em;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+    padding: 40px;
+    overflow: hidden;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  &__img-wrapper {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-25%);
+  }
+
+  &__text {
+    width: 100%;
+    padding-top: 40px;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__desc {
+    margin: 20px 0;
+  }
+
+  &__map {
+    position: relative;
+    padding-bottom: 56%;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// Breakpoint 
+
+@include breakpoint(small) {
+  .cards {
+    &__item {
+      display: flex;
+      padding: 0;
+      align-items: center;
+    }
+
+    &__img-wrapper {
+      align-self: stretch;
+      width: 300px;
+      height: auto;
+      border-radius: 0;
+    }
+
+    &__img {
+      width: auto;
+      min-width: 100%;
+      max-width: 350px;
+      min-height: 100%;
+      transform: translateY(0);
+    }
+
+    &__title {
+      align-self: flex-start
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      text-align: left;
+      padding: 40px;
+      flex: 2;
+    }
+
+    &__mail {
+      align-self: flex-start;
+    }
+  }
+  
+}
+
+@include breakpoint(large) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+      width: calc(50% - 20px);
+      flex-direction: column;
+      padding: 40px;
+      margin-bottom: 40px;
+    }
+
+    &__item:nth-last-of-type(-n+2) {
+      margin-bottom: 0;
+    }
+
+    &__img-wrapper {
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+    }
+
+    &__img {
+      height: auto;
+      width: 100%;
+      transform: translateY(-25%);
+    }
+
+    &__title {
+      align-self: center;
+    }
+
+    &__text {
+      align-items: stretch;
+      text-align: center;
+      padding: 0;
+      padding-top: 40px;
+    }
+
+    &__mail {
+      align-self: center;
+    }
+  }
+}
