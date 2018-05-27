@@ -1,0 +1,33 @@
+// #######################################
+// Contact
+// #######################################
+
+.contact {
+
+  // Contact Form
+
+  .contact-form {
+    background: $brand;
+    background: linear-gradient(45deg, $brand-dark 0%, $brand 100%);
+
+    &__title {
+      color: $background;
+      margin-bottom: 40px;
+    }
+
+    label {
+      color: $background !important;
+
+      .required {
+        color: $background;
+      }
+    }
+
+    input[type=submit] {
+      color: $brand !important;
+      background-color: #fff;
+    }
+
+  }
+
+}
