@@ -18,15 +18,15 @@ var autoprefixer = require('autoprefixer'),
 
 // paths
 var styleSrc = 'source/scss/**/*.scss',
-    styleDest = 'dist/assets/css/',
+    styleDest = 'dist/css/',
     htmlSrc = 'source/*.html',
     htmlDest = 'dist/',
     vendorSrc = 'source/js/vendors/',
-    vendorDest = 'dist/assets/js/',
+    vendorDest = 'dist/js/',
     scriptSrc = 'source/js/*.js',
-    scriptDest = 'dist/assets/js/',
+    scriptDest = 'dist/js/',
     imgSrc = 'source/img/**/*',
-    imgDest = 'dist/assets/img/*';
+    imgDest = 'dist/img/*';
     faviconSrc = 'source/favicon/**/*',
     faviconDest = 'dist/favicon/*';
 
@@ -56,13 +56,13 @@ gulp.task('sass', function() {
         .pipe(rename({
             basename: 'style'
         }))
-        .pipe(gulp.dest('dist/assets/css'))
+        .pipe(gulp.dest('dist/css'))
         .pipe(postcss([cssnano()]))
         .pipe(rename({
             basename: 'style',
             suffix: '.min'
         }))
-        .pipe(gulp.dest('dist/assets/css'));
+        .pipe(gulp.dest('dist/css'));
 });
 
 // Images
@@ -70,7 +70,7 @@ gulp.task('images', function() {
     gulp.src('source/img/*')
         .pipe(plumber())
         .pipe(images())
-        .pipe(gulp.dest('dist/assets/img'));
+        .pipe(gulp.dest('dist/img'));
 });
 
 // Favicon
@@ -86,7 +86,7 @@ gulp.task('scripts', function() {
         .pipe(plumber())
         .pipe(concat('script.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist/assets/js'));
+        .pipe(gulp.dest('dist/js'));
 });
 
 //Concat and Compress Vendor .js files
@@ -98,7 +98,7 @@ gulp.task('vendors', function() {
             ])
         .pipe(concat('vendors.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist/assets/js'));
+        .pipe(gulp.dest('dist/js'));
 });
 
 
@@ -120,7 +120,7 @@ gulp.task('watch', function(){
     gulp.watch(styleSrc,['sass']);
     gulp.watch(scriptSrc,['scripts']);
     gulp.watch(vendorSrc,['vendors']);
-    gulp.watch(['dist/*.html', 'dist/assets/css/*.css', 'dist/assets/js/*.js', 'dist/assets/js/vendors/*.js']).on('change', browserSync.reload);
+    gulp.watch(['dist/*.html', 'dist/css/*.css', 'dist/js/*.js', 'dist/js/vendors/*.js']).on('change', browserSync.reload);
 
 });
 
