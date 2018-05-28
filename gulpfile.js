@@ -27,6 +27,8 @@ var styleSrc = 'source/scss/**/*.scss',
     scriptDest = 'dist/assets/js/',
     imgSrc = 'source/img/**/*',
     imgDest = 'dist/assets/img/*';
+    faviconSrc = 'source/favicon/**/*',
+    faviconDest = 'dist/favicon/*';
 
 
 
@@ -71,6 +73,13 @@ gulp.task('images', function() {
         .pipe(gulp.dest('dist/assets/img'));
 });
 
+// Favicon
+gulp.task('favicon', function() {
+    gulp.src('source/favicon/*')
+        .pipe(plumber())
+        .pipe(gulp.dest('dist/favicon'));
+});
+
 // Uglify js files
 gulp.task('scripts', function() {
     gulp.src('source/js/*.js')
@@ -107,6 +116,7 @@ gulp.task('watch', function(){
 
     gulp.watch(htmlSrc,['html']);
     gulp.watch(imgSrc,['images']);
+    gulp.watch(faviconSrc,['favicon']);
     gulp.watch(styleSrc,['sass']);
     gulp.watch(scriptSrc,['scripts']);
     gulp.watch(vendorSrc,['vendors']);
@@ -116,4 +126,4 @@ gulp.task('watch', function(){
 
 
 // use default task to launch Browsersync and watch JS files
-gulp.task('default', [ 'html', 'images', 'sass', 'scripts', 'vendors', 'watch'], function () {});
+gulp.task('default', [ 'html', 'images', 'favicon', 'sass', 'scripts', 'vendors', 'watch'], function () {});
