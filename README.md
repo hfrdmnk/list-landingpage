@@ -1,6 +1,6 @@
 # List Landing Page | School Project
 
-This is a landing page for a fictitious todo app called ‘List’.  
+This is a landing page for a fictitious todo app called ‘List’. Visit the Website [here](https://listapp.netlify.com).    
 
 * Source Code: [source/](https://github.com/dmnkhfr/list-landingpage/tree/master/source)  
 * Production Code: [dist/](https://github.com/dmnkhfr/list-landingpage/tree/master/dist)  
