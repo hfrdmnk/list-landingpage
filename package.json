@@ -18,9 +18,9 @@
 	"author": "Dominik Hofer",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/dmnkhfr/list-landingpage/issues"
+		"url": "https://github.com/hfrdmnk/list-landingpage/issues"
 	},
-	"homepage": "https://github.com/dmnkhfr/list-landingpage#readme",
+	"homepage": "https://github.com/hfrdmnk/list-landingpage#readme",
 	"devDependencies": {
 		"autoprefixer": "^8.5.0",
 		"browser-sync": "^2.24.4",
