@@ -1,39 +1,39 @@
 {
-  "name": "list-landingpage",
-  "version": "1.0.0",
-  "description": "This is a landing page for a fictitious todo app called ‘List’.",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dmnkhfr/list-landingpage.git"
-  },
-  "keywords": [
-    "todo",
-    "landingpage",
-    "minimal"
-  ],
-  "author": "Dominik Hofer",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dmnkhfr/list-landingpage/issues"
-  },
-  "homepage": "https://github.com/dmnkhfr/list-landingpage#readme",
-  "devDependencies": {
-    "autoprefixer": "^8.5.0",
-    "browser-sync": "^2.24.4",
-    "cssnano": "^3.10.0",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-postcss": "^7.0.1",
-    "gulp-rename": "^1.2.3",
-    "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0"
-  }
+	"name": "list-landingpage",
+	"version": "1.0.0",
+	"description": "This is a landing page for a fictitious todo app called ‘List’.",
+	"main": "index.html",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hfrdmnk/list-landingpage.git"
+	},
+	"keywords": [
+		"todo",
+		"landingpage",
+		"minimal"
+	],
+	"author": "Dominik Hofer",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/dmnkhfr/list-landingpage/issues"
+	},
+	"homepage": "https://github.com/dmnkhfr/list-landingpage#readme",
+	"devDependencies": {
+		"autoprefixer": "^8.5.0",
+		"browser-sync": "^2.24.4",
+		"cssnano": "^3.10.0",
+		"del": "^3.0.0",
+		"gulp": "^3.9.1",
+		"gulp-concat": "^2.6.1",
+		"gulp-imagemin": "^4.1.0",
+		"gulp-plumber": "^1.2.0",
+		"gulp-postcss": "^7.0.1",
+		"gulp-rename": "^1.2.3",
+		"gulp-sass": "^4.0.1",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-uglify": "^3.0.0"
+	}
 }
